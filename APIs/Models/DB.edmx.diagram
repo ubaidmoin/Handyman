@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a02e9375d615421b897d5eaa5fa10426" Name="Diagram1">
+        <EntityTypeShape EntityType="HandymanDBModel.Category" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.Client" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.Complaint" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.FavoritePlace" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.HandymanService" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.HandymanType" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.Pricing" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.ServiceBooking" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.SubService" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HandymanDBModel.User" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="HandymanDBModel.fk_category" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_category_name" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_cid" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_service_client" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_complaint" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_cid_fp" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_hid" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_service_handymanservice" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_pricing" ManuallyRouted="false" />
+        <AssociationConnector Association="HandymanDBModel.fk_subservice" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
