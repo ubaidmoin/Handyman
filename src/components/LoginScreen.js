@@ -8,9 +8,14 @@ import {
   TouchableOpacity,
   Icon
 } from "react-native";
-
+import { connect } from "react-redux";
+import { SessionHelper } from "../helpers";
 import { Input, Button } from "./common";
-
+import {
+  success as userSuccess,
+  failure as userFailure
+} from "../actions/userActions";
+import _ from "lodash";
 class LoginScreen extends Component {
   state = { email: "taimur@gmail.com", password: "asdf" };
 
@@ -18,6 +23,21 @@ class LoginScreen extends Component {
     headerLeft: null,
     gesturesEnabled: false
   };
+
+  componentWillReceiveProps(nextProps) {
+    if (
+      !_.isEqual(nextProps.user.data, this.props.user.data) &&
+      SessionHelper.isUserAuthenticated()
+    ) {
+      this.props.navigation.navigate("Handyman");
+    }
+  }
+
+  componentDidMount() {
+    if (SessionHelper.isUserAuthenticated()) {
+      this.props.navigation.navigate("Handyman");
+    }
+  }
 
   onButtonPress() {
     let url =
@@ -48,7 +68,7 @@ class LoginScreen extends Component {
             alert('Invalid email or password.')
           });*/
     if (this.state.email == "taimur@gmail.com") {
-      this.props.navigation.navigate("Handyman", {
+      this.props.userSuccess({
         name: "Ubaid"
       });
     }
@@ -154,4 +174,10 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginScreen;
+const mapStateToProps = state => ({
+  user: state.user
+});
+
+const actions = { userSuccess, userFailure };
+
+export default connect(mapStateToProps, actions)(LoginScreen);
