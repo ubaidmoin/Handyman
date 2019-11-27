@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import React, { Component } from "react";
 import {
   Text,
@@ -62,6 +63,7 @@ class HomeScreen extends Component {
       directionCalc: false
     };
   }
+
   componentDidMount() {
     console.warn(this.props.navigation);
     navigator.geolocation.getCurrentPosition(position => {
@@ -364,4 +366,10 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HomeScreen;
+const mapStateToProps = state => ({
+  user: state.user
+});
+
+const actions = {};
+
+export default connect(mapStateToProps, actions)(HomeScreen);
