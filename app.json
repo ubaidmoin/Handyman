@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "?",
+    "name": "Handyman",
     "slug": "handyman",
     "privacy": "public",
+    "icon": "./src/assets/handymanIcon.png",
     "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
@@ -11,9 +12,8 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/login.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,6 +25,9 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
-  }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "Handyman",
+  "name": "HandymanAndroid"
 }
