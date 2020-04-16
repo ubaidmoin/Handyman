@@ -56,7 +56,7 @@ class HomeScreen extends Component {
     this.state = {
       checkCanceled: false,
       switchDisabled: false,
-      google_api_key: 'AIzaSyCLQcrBEdrKgoyeip5eiPimv0ukHuOkOXk',
+      google_api_key: 'YOUR_API_KEY',
       isModalVisible: false,
       switchValue: false,
       dialogVisible: false,

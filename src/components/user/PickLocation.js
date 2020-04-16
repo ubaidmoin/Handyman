@@ -61,7 +61,7 @@ class PickLocation extends Component {
 
   async onChangeDestination(destination){
     this.setState({destination})
-    const apiUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyCLQcrBEdrKgoyeip5eiPimv0ukHuOkOXk&input=${this.state.destination}&location=${this.state.latitude}, ${this.state.longitude}&radius=2000`
+    const apiUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?key=YOUR_API_KEY&input=${this.state.destination}&location=${this.state.latitude}, ${this.state.longitude}&radius=2000`
     try{
       const result = await fetch(apiUrl)
       const json = await result.json()
@@ -75,7 +75,7 @@ class PickLocation extends Component {
   }
 
    async getLatLong(placeid) {    
-    const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyCLQcrBEdrKgoyeip5eiPimv0ukHuOkOXk`    
+    const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=YOUR_API_KEY`    
     try{
       const result =  await fetch(apiUrl)
       const json =  await result.json()
@@ -123,7 +123,7 @@ class PickLocation extends Component {
           }}
           query={{
 
-            key: 'AIzaSyCLQcrBEdrKgoyeip5eiPimv0ukHuOkOXk',
+            key: 'YOUR_API_KEY',
             language: 'en', // language of the results
 
           }}
